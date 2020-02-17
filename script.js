@@ -83,7 +83,8 @@
     else if (Math.ceil(dayOfTheWeek) == 0 && gender === 'female') {
         document.getElementById("results").innerHTML =
             "Your day name is " + femaleNames[0] + " ,born on a Sunday.";
-    } else {
+    } 
+    else {
         alert('enter your information please');
     }
   }
