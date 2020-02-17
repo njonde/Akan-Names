@@ -1,10 +1,10 @@
 function getName() {
     var day = document.getElementById("day").value;
-    var D= parseInt(day);
+    var DD= parseInt(day);
     var month = document.getElementById("month").value;
-    var M = parseInt(month);
+    var MM= parseInt(month);
     var year = document.getElementById("year").value;
-    var Y = parseInt(year);
+    var YY = parseInt(year);
     var CC = parseInt(YY - 1) / 100 + 1; //cc -> century
     var dayOfTheWeek = parseInt(((CC / 4) - 2 * CC - 1) + ((5 * Y / 4)) + ((26 * (M + 1) / 10)) + D) % 7; //day of the week
     var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
@@ -15,16 +15,16 @@ function getName() {
     } else {
         gender = 'female';
     }
-    if (M < 0 || M > 12) {
+    if (MM < 0 || MM > 12) {
         alert("invalid month ");
     }
-    else if (D < 0 || D > 31) {
+    else if (DD < 0 || DD > 31) {
         alert("invalid  Date");
     }
-    else if (M == 2 && D > 29) {
+    else if (MM == 2 && DD > 29) {
         alert("invalid date");
     }
-    else if (Y < 1000 || Y > 2020) {
+    else if (YY < 1000 || YY > 2020) {
         alert("Invalid year");
     }
     else if (Math.ceil(dayOfTheWeek) == 1 && gender === 'male') {
