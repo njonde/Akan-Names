@@ -1,4 +1,4 @@
-
+function getName() {
     var day = document.getElementById("day").value;
     var D= parseInt(day);
     var month = document.getElementById("month").value;
@@ -9,7 +9,6 @@
     var dayOfTheWeek = parseInt(((CC / 4) - 2 * CC - 1) + ((5 * Y / 4)) + ((26 * (M + 1) / 10)) + D) % 7; //day of the week
     var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
     var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-    function getName() {
     var gender;
     if (document.getElementById("gender").checked) {
         gender = 'male';
