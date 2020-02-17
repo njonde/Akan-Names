@@ -1,16 +1,15 @@
-
+function akanNames() {
     var day = document.getElementById("day").value;
-    var DD= parseInt(day);
+    var DD = parseInt(day);
     var month = document.getElementById("month").value;
-    var MM= parseInt(month);
+    var MM = parseInt(month);
     var year = document.getElementById("year").value;
     var YY = parseInt(year);
     var CC = parseInt(YY - 1) / 100 + 1; //cc -> century
-    var dayOfTheWeek = parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7; 
+    var dayOfTheWeek = parseInt(((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7; //day of the week
     var maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
     var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-    var gender;
-    function getName() {
+    var gender
     if (document.getElementById("gender").checked) {
         gender = 'male';
     } else {
@@ -23,7 +22,7 @@
         alert("invalid  Date");
     }
     else if (MM == 2 && DD > 29) {
-        alert("invalid date");
+        alert("This month does not have those number of days");
     }
     else if (YY < 1000 || YY > 2020) {
         alert("Invalid year");
@@ -83,8 +82,7 @@
     else if (Math.ceil(dayOfTheWeek) == 0 && gender === 'female') {
         document.getElementById("results").innerHTML =
             "Your day name is " + femaleNames[0] + " ,born on a Sunday.";
-    } 
-    else {
+    } else {
         alert('enter your information please');
     }
   }
